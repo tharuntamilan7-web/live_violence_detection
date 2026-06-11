@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Violence Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🚨 Live Violence Detection System</h1>
+
+<form action="/start_video" method="post" enctype="multipart/form-data">
+    <input type="file" name="video" accept="video/*" required>
+    <button type="submit">Start Video Detection</button>
+</form>
+
+<br>
+
+<button onclick="location.href='/start_webcam'">Start Webcam Monitoring</button>
+
+<br><br>
+
+<form action="/start_cctv" method="post">
+    <input type="text" name="rtsp" placeholder="RTSP URL" required>
+    <button type="submit">Start CCTV Monitoring</button>
+</form>
+
+<br>
+
+<button onclick="location.href='/stop'" style="background:red">Stop Monitoring</button>
+
+</body>
+</html>
